@@ -71,18 +71,42 @@ uploaded_file = st.file_uploader(
     help="Upload a JSON file containing spectral data"
 )
 
+# with st.sidebar:
+#     st.subheader("Download Example Json")
+#     json_name = st.selectbox(
+#         "Select Example Json",
+#         JSONS,
+#     )
+#     with open(json_name, "r") as f:
+#         json_data = json.load(f)
+#     # display the json if needed
+#     with st.expander("Example Json"):
+#         st.json(json_data)
+#     json_download_data = json.dumps(json_data, indent=4)
+#     st.download_button(
+#         label="Download Example Json",
+#         data=json_download_data,
+#         file_name=json_name,
+#         mime="application/json"
+#     )
+
 with st.sidebar:
     st.subheader("Download Example Json")
+
     json_name = st.selectbox(
         "Select Example Json",
         JSONS,
     )
+
     with open(json_name, "r") as f:
         json_data = json.load(f)
+
     # display the json if needed
     with st.expander("Example Json"):
         st.json(json_data)
+
     json_download_data = json.dumps(json_data, indent=4)
+
     st.download_button(
         label="Download Example Json",
         data=json_download_data,
