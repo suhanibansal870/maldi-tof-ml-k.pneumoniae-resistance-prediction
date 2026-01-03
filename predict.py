@@ -118,7 +118,7 @@ with st.sidebar:
 def get_prediction_label(prediction_value):
     """Convert numeric prediction to readable label"""
     if prediction_value == 0:
-        return "Resistant"
+        return "Resistant (R)"
     elif prediction_value == 1:
         return "Susceptible (S)"
     else:
@@ -130,7 +130,7 @@ def get_short_prediction_label(prediction_value):
     if prediction_value == 0:
         return "Resistant"
     elif prediction_value == 1:
-        return "S"
+        return "Susceptible"
     else:
         return "Unknown"
 
@@ -236,10 +236,10 @@ if uploaded_file is not None:
                         column_config={
                             "Sample ID": st.column_config.TextColumn(width="small"),
                             "Model": st.column_config.TextColumn(width="medium"),
-                            "Precision": st.column_config.NumberColumn(format="%.1f"),
-                            "Recall": st.column_config.NumberColumn(format="%.1f"),
-                            "F1-Score": st.column_config.NumberColumn(format="%.1f"),
-                            "Accuracy": st.column_config.NumberColumn(format="%.1f"),
+                            "Precision": st.column_config.NumberColumn(format="%.2f"),
+                            "Recall": st.column_config.NumberColumn(format="%.2f"),
+                            "F1-Score": st.column_config.NumberColumn(format="%.2f"),
+                            "Accuracy": st.column_config.NumberColumn(format="%.2f"),
                             "Final Outcome": st.column_config.TextColumn(width="small")
                         }
                     )
