@@ -196,7 +196,7 @@ if uploaded_file is not None:
                     # Add Logistic Regression results
                     results_data.append({
                         'Sample ID': sample_id,
-                        'Model': 'Logistic Regression',  # Matching your image spelling
+                        'Model': 'Logical Regression',  # Matching your image spelling
                         'Precision': f"{MODEL_METRICS['Logistic Regression']['precision']:.1f}",
                         'Recall': f"{MODEL_METRICS['Logistic Regression']['recall']:.1f}",
                         'F1-Score': f"{MODEL_METRICS['Logistic Regression']['f1_score']:.1f}",
@@ -218,7 +218,7 @@ if uploaded_file is not None:
                     # Add KNN results (using "RF" from your image if needed, but showing KNN)
                     results_data.append({
                         'Sample ID': sample_id,
-                        'Model': 'Random Forest',  # Using RF as shown in image, change to KNN if needed
+                        'Model': 'RF',  # Using RF as shown in image, change to KNN if needed
                         'Precision': f"{MODEL_METRICS['K-Nearest Neighbors']['precision']:.1f}",
                         'Recall': f"{MODEL_METRICS['K-Nearest Neighbors']['recall']:.1f}",
                         'F1-Score': f"{MODEL_METRICS['K-Nearest Neighbors']['f1_score']:.1f}",
