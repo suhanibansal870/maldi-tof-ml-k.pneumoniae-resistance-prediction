@@ -219,10 +219,10 @@ if uploaded_file is not None:
                     results_data.append({
                         'Sample ID': sample_id,
                         'Model': 'RF',  # Using RF as shown in image, change to KNN if needed
-                        'Precision': f"{MODEL_METRICS['K-Nearest Neighbors']['precision']:.1f}",
-                        'Recall': f"{MODEL_METRICS['K-Nearest Neighbors']['recall']:.1f}",
-                        'F1-Score': f"{MODEL_METRICS['K-Nearest Neighbors']['f1_score']:.1f}",
-                        'Accuracy': f"{MODEL_METRICS['K-Nearest Neighbors']['accuracy']:.1f}",
+                        'Precision': f"{MODEL_METRICS['Random Forest']['precision']:.1f}",
+                        'Recall': f"{MODEL_METRICS['Random Forest']['recall']:.1f}",
+                        'F1-Score': f"{MODEL_METRICS['Random Forest']['f1_score']:.1f}",
+                        'Accuracy': f"{MODEL_METRICS['Random Forest']['accuracy']:.1f}",
                         'Final Outcome': get_short_prediction_label(rf_prediction)
                     })
                     
