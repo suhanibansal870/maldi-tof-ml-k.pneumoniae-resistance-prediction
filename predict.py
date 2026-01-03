@@ -32,22 +32,22 @@ rf_model = load_pickle_model("RandomForest")
 # Predefined model performance metrics (you should replace these with actual metrics from your models)
 MODEL_METRICS = {
     'Logistic Regression': {
-        'precision': 0.85,
+        'precision': 0.81,
         'recall': 0.82,
-        'f1_score': 0.83,
-        'accuracy': 0.88
-    },
-    'Multi-Layer Perceptron': {
-        'precision': 0.87,
-        'recall': 0.84,
-        'f1_score': 0.85,
-        'accuracy': 0.89
-    },
-    'K-Nearest Neighbors': {
-        'precision': 0.83,
-        'recall': 0.80,
         'f1_score': 0.81,
         'accuracy': 0.86
+    },
+    'Multi-Layer Perceptron': {
+        'precision': 0.77,
+        'recall': 0.80,
+        'f1_score': 0.79,
+        'accuracy': 0.84
+    },
+    'Random Forest': {
+        'precision': 0.71,
+        'recall': 0.71,
+        'f1_score': 0.71,
+        'accuracy': 0.78
     }
 }
 
@@ -196,7 +196,7 @@ if uploaded_file is not None:
                     # Add Logistic Regression results
                     results_data.append({
                         'Sample ID': sample_id,
-                        'Model': 'Logical Regression',  # Matching your image spelling
+                        'Model': 'Logistic Regression',  # Matching your image spelling
                         'Precision': f"{MODEL_METRICS['Logistic Regression']['precision']:.1f}",
                         'Recall': f"{MODEL_METRICS['Logistic Regression']['recall']:.1f}",
                         'F1-Score': f"{MODEL_METRICS['Logistic Regression']['f1_score']:.1f}",
@@ -218,7 +218,7 @@ if uploaded_file is not None:
                     # Add KNN results (using "RF" from your image if needed, but showing KNN)
                     results_data.append({
                         'Sample ID': sample_id,
-                        'Model': 'RF',  # Using RF as shown in image, change to KNN if needed
+                        'Model': 'Random Forest',  # Using RF as shown in image, change to KNN if needed
                         'Precision': f"{MODEL_METRICS['K-Nearest Neighbors']['precision']:.1f}",
                         'Recall': f"{MODEL_METRICS['K-Nearest Neighbors']['recall']:.1f}",
                         'F1-Score': f"{MODEL_METRICS['K-Nearest Neighbors']['f1_score']:.1f}",
