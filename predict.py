@@ -197,10 +197,10 @@ if uploaded_file is not None:
                     results_data.append({
                         'Sample ID': sample_id,
                         'Model': 'Logistic Regression',  # Matching your image spelling
-                        'Precision': f"{MODEL_METRICS['Logistic Regression']['precision']:.1f}",
-                        'Recall': f"{MODEL_METRICS['Logistic Regression']['recall']:.1f}",
-                        'F1-Score': f"{MODEL_METRICS['Logistic Regression']['f1_score']:.1f}",
-                        'Accuracy': f"{MODEL_METRICS['Logistic Regression']['accuracy']:.1f}",
+                        'Precision': f"{MODEL_METRICS['Logistic Regression']['precision']:.2f}",
+                        'Recall': f"{MODEL_METRICS['Logistic Regression']['recall']:.2f}",
+                        'F1-Score': f"{MODEL_METRICS['Logistic Regression']['f1_score']:.2f}",
+                        'Accuracy': f"{MODEL_METRICS['Logistic Regression']['accuracy']:.2f}",
                         'Final Outcome': get_short_prediction_label(lr_prediction)
                     })
                     
@@ -208,10 +208,10 @@ if uploaded_file is not None:
                     results_data.append({
                         'Sample ID': sample_id,
                         'Model': 'MLP',
-                        'Precision': f"{MODEL_METRICS['Multi-Layer Perceptron']['precision']:.1f}",
-                        'Recall': f"{MODEL_METRICS['Multi-Layer Perceptron']['recall']:.1f}",
-                        'F1-Score': f"{MODEL_METRICS['Multi-Layer Perceptron']['f1_score']:.1f}",
-                        'Accuracy': f"{MODEL_METRICS['Multi-Layer Perceptron']['accuracy']:.1f}",
+                        'Precision': f"{MODEL_METRICS['Multi-Layer Perceptron']['precision']:.2f}",
+                        'Recall': f"{MODEL_METRICS['Multi-Layer Perceptron']['recall']:.2f}",
+                        'F1-Score': f"{MODEL_METRICS['Multi-Layer Perceptron']['f1_score']:.2f}",
+                        'Accuracy': f"{MODEL_METRICS['Multi-Layer Perceptron']['accuracy']:.2f}",
                         'Final Outcome': get_short_prediction_label(mlp_prediction)
                     })
                     
@@ -219,10 +219,10 @@ if uploaded_file is not None:
                     results_data.append({
                         'Sample ID': sample_id,
                         'Model': 'Random Forest',  # Using RF as shown in image, change to KNN if needed
-                        'Precision': f"{MODEL_METRICS['Random Forest']['precision']:.1f}",
-                        'Recall': f"{MODEL_METRICS['Random Forest']['recall']:.1f}",
-                        'F1-Score': f"{MODEL_METRICS['Random Forest']['f1_score']:.1f}",
-                        'Accuracy': f"{MODEL_METRICS['Random Forest']['accuracy']:.1f}",
+                        'Precision': f"{MODEL_METRICS['Random Forest']['precision']:.2f}",
+                        'Recall': f"{MODEL_METRICS['Random Forest']['recall']:.2f}",
+                        'F1-Score': f"{MODEL_METRICS['Random Forest']['f1_score']:.2f}",
+                        'Accuracy': f"{MODEL_METRICS['Random Forest']['accuracy']:.2f}",
                         'Final Outcome': get_short_prediction_label(rf_prediction)
                     })
                     
