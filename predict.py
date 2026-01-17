@@ -13,23 +13,11 @@ JSONS = ["Sample_1.json", "Sample_2.json", "Sample_3.json","Sample_4.json","Samp
 
 IMAGE_ADDRESS = "https://biolabtests.com/wp-content/uploads/Microbial-Top-Facts-Klebsiella-pneumoniae.png"
 
-# Add an image (scaled down but responsive)
-st.markdown(
-    """
-    <style>
-      .img-wrap {
-        max-width: 420px;   /* adjust this */
-        width: 100%;
-        margin: 0 auto;     /* optional: center */
-      }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+# Add an image (responsive but constrained)
+left, mid, right = st.columns([1, 2, 1])  # mid is 2/4 of the page width
 
-st.markdown('<div class="img-wrap">', unsafe_allow_html=True)
-st.image(IMAGE_ADDRESS, caption="Classification", use_container_width=True)
-st.markdown("</div>", unsafe_allow_html=True)
+with mid:
+    st.image(IMAGE_ADDRESS, caption="Classification", use_container_width=True)
 
 
 st.set_page_config(page_title="K. pneumoniae • Ertapenem S/R Predictor", page_icon="🧬", layout="wide")
