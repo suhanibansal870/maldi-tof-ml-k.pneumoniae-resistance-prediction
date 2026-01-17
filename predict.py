@@ -14,10 +14,11 @@ JSONS = ["Sample_1.json", "Sample_2.json", "Sample_3.json","Sample_4.json","Samp
 IMAGE_ADDRESS = "k.pneumonia.png"
 
 # Add an image (responsive but constrained)
-left, mid, right = st.columns([1, 3, 1])  # mid is 2/4 of the page width
+# left, mid, right = st.columns([1, 3, 1])  # mid is 2/4 of the page width
 
-with mid:
-    st.image(IMAGE_ADDRESS, use_container_width=True)
+# with mid:
+#     
+st.image(IMAGE_ADDRESS, use_container_width=True)
 
 
 st.set_page_config(page_title="K. pneumoniae • Ertapenem S/R Predictor", page_icon="🧬", layout="wide")
