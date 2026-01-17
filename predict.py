@@ -14,7 +14,7 @@ JSONS = ["Sample_1.json", "Sample_2.json", "Sample_3.json","Sample_4.json","Samp
 IMAGE_ADDRESS = "https://biolabtests.com/wp-content/uploads/Microbial-Top-Facts-Klebsiella-pneumoniae.png"
 
 # Add an image (responsive but constrained)
-left, mid, right = st.columns([1, 2, 1])  # mid is 2/4 of the page width
+left, mid, right = st.columns([1, 3, 1])  # mid is 2/4 of the page width
 
 with mid:
     st.image(IMAGE_ADDRESS, caption="Classification", use_container_width=True)
