@@ -17,7 +17,7 @@ IMAGE_ADDRESS = "https://biolabtests.com/wp-content/uploads/Microbial-Top-Facts-
 left, mid, right = st.columns([1, 3, 1])  # mid is 2/4 of the page width
 
 with mid:
-    st.image(IMAGE_ADDRESS, caption="Classification", use_container_width=True)
+    st.image(IMAGE_ADDRESS, use_container_width=True)
 
 
 st.set_page_config(page_title="K. pneumoniae • Ertapenem S/R Predictor", page_icon="🧬", layout="wide")
