@@ -11,7 +11,7 @@ from constants import ALL_COLUMNS
 # constants
 JSONS = ["Sample_1.json", "Sample_2.json", "Sample_3.json","Sample_4.json","Sample_5.json"]
 
-IMAGE_ADDRESS = "https://biolabtests.com/wp-content/uploads/Microbial-Top-Facts-Klebsiella-pneumoniae.png"
+IMAGE_ADDRESS = "k.pneumonia.png"
 
 # Add an image (responsive but constrained)
 left, mid, right = st.columns([1, 3, 1])  # mid is 2/4 of the page width
