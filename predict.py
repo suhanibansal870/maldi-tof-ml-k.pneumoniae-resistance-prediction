@@ -68,9 +68,16 @@ st.write(
 )
 
 # Sidebar for file upload
-st.header("📤 Upload JSON Data")
+# st.header("Upload MALDI-TOF MS Spectrum file of the tested sample")
+# uploaded_file = st.file_uploader(
+#     "Upload your spectral data (JSON only)",
+#     type=["json"],
+#     accept_multiple_files=False,
+#     help="Upload a JSON file containing spectral data"
+# )
+
+st.header("Upload MALDI-TOF MS Spectrum file of the tested sample")
 uploaded_file = st.file_uploader(
-    "Upload your spectral data (JSON only)",
     type=["json"],
     accept_multiple_files=False,
     help="Upload a JSON file containing spectral data"
@@ -260,7 +267,7 @@ if uploaded_file is not None:
                     
                     # Determine final consensus
                     st.divider()
-                    st.subheader("🎯 Consensus Analysis")
+                    st.subheader("Final Results")
                     
                     predictions = [lr_prediction, mlp_prediction, rf_prediction]
                     final_prediction_value=mode(predictions)
