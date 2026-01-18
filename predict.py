@@ -172,7 +172,7 @@ if uploaded_file is not None:
         st.success(f"✅ File '{sample_id}' successfully uploaded and processed!")
         
         # Show a preview of the data
-        with st.expander("📊 View Uploaded Data"):
+        with st.expander("View Uploaded Data"):
             st.json(json_data)
             
         # Convert to DataFrame for better display
@@ -201,7 +201,7 @@ if uploaded_file is not None:
                     rf_confidence = get_prediction_confidence(rf_model, df, rf_prediction)
                     
                     # Create results table matching the image format
-                    st.header("📊 Prediction Results Table")
+                    st.header("Prediction Results Table")
                     
                     # Create a DataFrame for the results table
                     results_data = []
@@ -287,7 +287,7 @@ if uploaded_file is not None:
                     
                     # Add explanation and disclaimer
                     st.divider()
-                    st.subheader("📋 Clinical Notes")
+                    st.subheader("Clinical Notes")
                     explanation_text = f"""
                     
                     ### ⚠️ Important Clinical Disclaimer
