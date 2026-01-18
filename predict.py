@@ -78,6 +78,7 @@ st.write(
 
 st.header("Upload MALDI-TOF MS Spectrum file of the tested sample")
 uploaded_file = st.file_uploader(
+    "",
     type=["json"],
     accept_multiple_files=False,
     help="Upload a JSON file containing spectral data"
