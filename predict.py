@@ -56,7 +56,7 @@ MODEL_METRICS = {
     }
 }
 
-st.title("Klebsiella pneumoniae Ertapenem Susceptibility Test Using MALDI-TOF MS Data")
+st.title("Klebsiella pneumoniae Ertapenem Susceptibility Test")
 st.markdown("**Klebsiella pneumoniae**")
 st.write(
     """
@@ -66,7 +66,7 @@ st.write(
 st.markdown("**How to Read This Report**")
 st.write(
     """
-    This app loads three trained AI classifiers and predicts Ertapenem susceptibility for Klebsiella pneumoniae. For this prediction to work, upload a JSON with the required feature keys (e.g. spectrum_bin_*). The downloadable table generated below gives you an analysis that is verified by the three different models, as well as a final outcome. Susceptible (S) signals that the patient is susceptible to ertapenem, and the recommendation is to continue using the antibiotic. Resistant (R) signals that the sample is resistant to ertapenem, and the recommendation is to not administer ertapenem to the patient.
+    This app loads three trained AI classifiers and predicts Ertapenem susceptibility for Klebsiella pneumoniae. For this prediction to work, upload a JSON file of the MALDI-TOF MS data with the required feature keys (e.g. spectrum_bin_*). The downloadable table generated below gives you an analysis that is verified by the three different models, as well as a final outcome. Susceptible (S) signals that the patient is susceptible to ertapenem, and the recommendation is to continue using the antibiotic. Resistant (R) signals that the sample is resistant to ertapenem, and the recommendation is to not administer ertapenem to the patient.
     """
 )
 
