@@ -83,7 +83,7 @@ st.write(
 #     help="Upload a JSON file containing spectral data"
 # )
 
-st.header("Upload MALDI-TOF MS Spectrum file of the tested sample")
+st.header("Upload MALDI-TOF MS Spectrum file of the patient's Klebsiella pneumoniae sample")
 uploaded_file = st.file_uploader(
     "",
     type=["json"],
