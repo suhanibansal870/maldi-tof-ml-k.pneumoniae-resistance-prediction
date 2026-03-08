@@ -3,6 +3,7 @@ import json
 import pandas as pd
 import pickle
 import numpy as np
+import time
 from datetime import datetime
 from statistics import mode
 
@@ -56,7 +57,7 @@ MODEL_METRICS = {
     }
 }
 
-st.title("Klebsiella pneumoniae Ertapenem Susceptibility Test")
+st.title("Klebsiella pneumoniae Ertapenem Resistance Test")
 st.markdown("**Klebsiella pneumoniae**")
 st.write(
     """
@@ -198,6 +199,7 @@ if uploaded_file is not None:
             if st.button("RUN PREDICTION", type="primary"):
                 with st.spinner("Analyzing Spectral data with all models..."):
                     # Get predictions from all three models
+                    time.sleep(4)  # Simulate processing time
                     lr_prediction = logistic_regression_model.predict(df)[0]
                     mlp_prediction = mlp_model.predict(df)[0]
                     rf_prediction = rf_model.predict(df)[0]
